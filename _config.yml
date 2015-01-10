@@ -13,7 +13,7 @@ fancybox: true
 sidebar: right
 widgets:
 - category
-#- tag
+- tag
 - tagcloud
 - archive
 - recent_posts
@@ -21,7 +21,7 @@ widgets:
 
 # Links
 links:
-  考据癖: http://localhost-8080.com/
+  Beeder: http://beeder.me/
 
 # Miscellaneous
 google_analytics:
@@ -32,10 +32,10 @@ fb_admins:
 fb_app_id:
 
 #Weibo ID. e.g. 436062867 for http://weibo.com/436062867
-weibo_id: 5297201605 
+weibo_id:  
 
 # Duoshuo
-duoshuo_shortname: beeder
+duoshuo_shortname: 
 
 # Baidu share
 baidushare: false
