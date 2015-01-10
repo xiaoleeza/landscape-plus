@@ -1,4 +1,4 @@
-# Landscape plus
+# Landscape plus22
 
 针对中国大陆地区对hexo官方主题landscape进行优化。
 

@@ -58,11 +58,13 @@
     } else{
       var url = $this.attr('data-url'),
       encodedUrl = encodeURIComponent(url),
+	  title = $this.attr('data-title'),
+	  weibo_id = $this.attr('data-weibo-id'),
       id = 'article-share-box-' + $this.attr('data-id');
 
       if ($('#' + id).length){
         var box = $('#' + id);
-
+		
         if (box.hasClass('on')){
           box.removeClass('on');
           return;
@@ -72,10 +74,12 @@
           '<div id="' + id + '" class="article-share-box">',
             '<input class="article-share-input" value="' + url + '">',
             '<div class="article-share-links">',
-              '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
-              '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
-              '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
-              '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+              '<a href="http://service.weibo.com/share/share.php?title=' + title + '&url=' + encodedUrl +'&ralateUid=' + weibo_id + '&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="Weibo"></a>',
+              '<a href="http://widget.renren.com/dialog/share?title=' + title + '&resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl +'" class="article-share-renren" target="_blank" title="RenRen"></a>',
+			  '<a href="#" class="overlay" id="qrcode"></a>',
+			  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+			  '<a href="#qrcode" class="article-share-qrcode" title="QRcode"></a>',
+			  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
             '</div>',
           '</div>'
         ].join('');
@@ -83,6 +87,14 @@
         var box = $(html);
 
         $('body').append(box);
+		
+		$('.article-share-qrcode').click(function(){
+			var imgSrc = $('#qrcode-pic').attr('data-src');
+			$('#qrcode-pic').attr('src', imgSrc);
+			$('#qrcode-pic').load(function(){
+			$('.qrcode strong').text(' ');
+				});
+			});
       }
 
       $('.article-share-box.on').hide();

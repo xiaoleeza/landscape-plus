@@ -1,16 +1,16 @@
 // https://github.com/chriskempson/tomorrow-theme
-highlight-background = #272822
-highlight-current-line = #3E3D32
-highlight-selection = #49483E
-highlight-foreground = #F8F8F2
-highlight-comment = #75715E
-highlight-red = #F92672
-highlight-orange = #FD971F
-highlight-yellow = #E6DB74
-highlight-green = #A6E22E
-highlight-aqua = #A1EFE4
-highlight-blue = #66D9EF
-highlight-purple = #AE81FF
+highlight-background = #2d2d2d
+highlight-current-line = #393939
+highlight-selection = #515151
+highlight-foreground = #cccccc
+highlight-comment = #999999
+highlight-red = #f2777a
+highlight-orange = #f99157
+highlight-yellow = #ffcc66
+highlight-green = #99cc99
+highlight-aqua = #66cccc
+highlight-blue = #6699cc
+highlight-purple = #cc99cc
 
 $code-block
   background: highlight-background
@@ -31,19 +31,15 @@ $line-numbers
   pre, code
     font-family: font-mono
   code
-    background: #f0f0f0
+    background: color-background
     text-shadow: 0 1px #fff
-    font-size:  0.85em
     padding: 0 0.3em
-    border: 1px solid #dcdcdc
-    border-radius: 3px
   pre
     @extend $code-block
     code
       background: none
       text-shadow: none
       padding: 0
-      border: none
   .highlight
     @extend $code-block
     pre
@@ -111,12 +107,11 @@ $line-numbers
 
 pre
   .comment
-  .preprocessor
-    color: highlight-comment
-  .tag
-    color: highlight-foreground
   .title
+    color: highlight-comment
   .variable
+  .attribute
+  .tag
   .regexp
   .ruby .constant
   .xml .tag .title
@@ -128,16 +123,15 @@ pre
   .css .pseudo
     color: highlight-red
   .number
+  .preprocessor
   .built_in
   .literal
-  .constant
-    color: highlight-purple
   .params
+  .constant
     color: highlight-orange
   .class
   .ruby .class .title
   .css .rules .attribute
-  .attribute
     color: highlight-green
   .string
   .value
@@ -145,7 +139,7 @@ pre
   .header
   .ruby .symbol
   .xml .cdata
-    color: highlight-yellow
+    color: highlight-green
   .css .hexcolor
     color: highlight-aqua
   .function
@@ -159,4 +153,4 @@ pre
     color: highlight-blue
   .keyword
   .javascript .function
-    color: highlight-blue
+    color: highlight-purple
