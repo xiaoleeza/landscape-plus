@@ -3,10 +3,10 @@
 针对中国大陆地区对hexo官方主题landscape进行优化。
 
 ## 所有新特性
-. 增加返回顶部按钮，也可取消
-. 增加站长统计代码
-. 更改站内搜索为swiftype
-. 修改tagcloud显示数量
++ 增加返回顶部按钮，也可取消
++ 增加站长统计代码
++ 更改站内搜索为swiftype
++ 修改tagcloud显示数量
 + 根据国情，**去掉Google的库**，改用cloudflare的cdn，打开页面不再卡住了。=> [参与国内cdn的讨论](https://github.com/xiangming/landscape-plus/issues/3)
 + 增加了 **语言包** 。（支持英文、中文简体和中文繁体。）
 + 增加了 **友情链接** widget。（已默认开启，修改方法看下面的[常见问题](#常见问题)。）
@@ -16,7 +16,7 @@
 + 增加对 **IE8** 的支持。
 + 集成 **mathjax**，即latex数学公式的支持。（感谢 @Svtter 的[pull request](https://github.com/xiangming/landscape-plus/pull/35)）
 
-主题还在调整中，欢迎[open issue](https://github.com/xiangming/landscape-plus/issues/new)来提建议，参与讨论。
+主题还在调整中，欢迎[new issue](https://github.com/Beeder/landscape-plus/issues/new)来提建议，参与讨论。
 
 ## 文档目录
 
@@ -104,8 +104,8 @@ Swiftype: true
 + `links` - 友情链接
 + `duoshuo_shortname` - 多说评论id
 + `baidushare` - 是否开启百度分享
-. `back_to_top` - 是否添加返回顶部按钮
-. `Swiftype` - 站内搜索是否使用Swiftype
++ `back_to_top` - 是否添加返回顶部按钮
++ `Swiftype` - 站内搜索是否使用Swiftype
 
 ## <a name='常见问题'>常见问题</a>
 
@@ -137,10 +137,10 @@ Swiftype: true
 > 修改`themes/landscape-plus\_config.yml`，将`Swiftype`设置为`true`，并在Swiftype官网选择overlay的needs a search field类型，将搜索代码粘贴在`..\theme\landscape-plus\layout\_partial\header.ejs`注释处。
 
 **问**：weibo_id是什么东西？
-> 填写weibo_id，在比人分享你的文章到微薄时，会自动@你，weibo_id是一串数字，在[这里](http://open.weibo.com/sharebutton)第一步的关联账号中填写你的微薄账号，在第三步的WBML代码中显示的`ralateUid`即为你的weibo_id。
+> 填写weibo_id，在别人分享你的文章到微薄时，会自动@你，weibo_id是一串数字，在[这里](http://open.weibo.com/sharebutton)第一步的关联账号中填写你的微薄账号，在第三步的WBML代码中显示的`ralateUid`即为你的weibo_id。
 
 **问**：站长统计代码贴在哪里？
-> 修改`..\theme\landscape-plus\layout\_partial\footer.ejs`，将最简洁的站长统计代码粘贴在注释处。（已默认开启）
+> 修改`..\theme\landscape-plus\layout\_partial\footer.ejs`，将最简洁的站长统计代码粘贴在注释处。
 
 **问**：怎样自定义标签云显示标签数量？
 > 修改`..\theme\landscape-plus\layout\_widget\tagcloud.ejs`第5行，将amount设置为想要显示的标签数，0为全部显示。
